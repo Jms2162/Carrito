@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-labelledby="title description">
+  <title id="title">Una familia en su hogar</title>
+  <desc id="description">Ilustración cálida de una familia compartiendo su hogar con un gato y un perro.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f0eee3"/>
+      <stop offset="1" stop-color="#dfe9df"/>
+    </linearGradient>
+    <linearGradient id="sofa" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#b7c8b7"/>
+      <stop offset="1" stop-color="#819b89"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="640" fill="url(#background)"/>
+  <circle cx="488" cy="142" r="72" fill="#f3c997" opacity=".8"/>
+  <path d="M58 495h524v145H58z" fill="#d0aa86"/>
+  <path d="M76 363q0-30 30-30h428q30 0 30 30v135H76z" fill="url(#sofa)"/>
+  <path d="M58 468h524v58q0 28-28 28H86q-28 0-28-28z" fill="#718b79"/>
+  <path d="M109 381h85v89h-85zm337 0h85v89h-85z" rx="14" fill="#cbd7c9"/>
+  <path d="M241 351q0-63 63-63t63 63v112H241z" fill="#d5aa86"/>
+  <path d="M251 322q5-58 55-58 49 0 55 58-26-22-55-22t-55 22" fill="#59483f"/>
+  <path d="M267 349h11m30 0h11m-32 19q9 8 18 0" fill="none" stroke="#674a3f" stroke-linecap="round" stroke-width="5"/>
+  <path d="M313 361q0-77 66-77t66 77v101H313z" fill="#d89a78"/>
+  <path d="M322 321q9-50 57-50 51 0 60 51-34-24-61-24-29 0-56 23" fill="#4a423d"/>
+  <path d="M339 355h10m34 0h10m-29 20q10 8 20 0" fill="none" stroke="#674a3f" stroke-linecap="round" stroke-width="5"/>
+  <path d="M215 443q0-47 42-47t42 47v48h-84z" fill="#e2bb79"/>
+  <circle cx="257" cy="382" r="31" fill="#f0c49c"/>
+  <path d="M227 382q1-34 31-34 28 0 30 33-16-12-30-12-16 0-31 13" fill="#765642"/>
+  <path d="M232 386h8m34 0h8m-25 12q6 5 12 0" fill="none" stroke="#674a3f" stroke-linecap="round" stroke-width="3"/>
+  <path d="M155 506q0-43 34-43 25 0 34 31l-8 39h-54z" fill="#d89b6e"/>
+  <path d="M155 481q-16-18-8-43l26 22m45 19q21-13 20-40l-27 19" fill="#d89b6e"/>
+  <path d="M164 488q25-13 48 0l16 31h-81z" fill="#f1e7d3"/>
+  <circle cx="175" cy="486" r="3" fill="#59483f"/><circle cx="197" cy="486" r="3" fill="#59483f"/>
+  <path d="M164 520q-24 0-30 18h48m48-18q22 0 28 18h-48" fill="none" stroke="#59483f" stroke-linecap="round" stroke-width="7"/>
+  <path d="M442 500q0-40 34-40 28 0 34 39l-2 48h-66z" fill="#c48b63"/>
+  <path d="M446 481q-15-16-8-40l24 21m44 19q19-15 17-39l-27 18" fill="#c48b63"/>
+  <path d="M461 479q15-13 31 0l13 22h-56z" fill="#f2eadc"/>
+  <path d="M474 485h3m13 0h3m-10 6q4 3 8 0" fill="none" stroke="#59483f" stroke-linecap="round" stroke-width="3"/>
+  <path d="M458 541h28m20 0h22" stroke="#59483f" stroke-linecap="round" stroke-width="8"/>
+  <path d="M108 253h82v80h-82z" fill="#f8f6ee"/>
+  <path d="M149 253v80m-41-40h82" stroke="#b1c2b1" stroke-width="7"/>
+  <path d="M104 253l45-37 45 37" fill="none" stroke="#819b89" stroke-linejoin="round" stroke-width="9"/>
+  <path d="M96 552h448" stroke="#ad896b" stroke-width="6"/>
+</svg>

@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f8f8f6" />
+    <meta
+      name="description"
+      content="Descubrí productos para mascotas y el hogar en el catálogo público de NovaShop."
+    />
+    <title>NovaShop — Un mundo de cosas buenas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="announcement-bar">NovaShop · Demo local: precios y stock ficticios · No se envían emails ni se realizan cobros</div>
+
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="NovaShop, inicio">
+        <span class="brand-mark" aria-hidden="true">n<span>.</span></span>
+        <span>nova<span>shop</span></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a class="nav-link active" href="#productos">Tienda</a>
+        <a class="nav-link" href="#productos" data-category-link="Mascotas">Mascotas</a>
+        <a class="nav-link" href="#productos" data-category-link="Hogar">Hogar</a>
+      </nav>
+
+      <div class="header-actions">
+        <label class="search-box">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16 16 4 4"></path></svg>
+          <input id="search-input" type="search" placeholder="Buscar productos..." aria-label="Buscar productos" />
+        </label>
+        <button class="cart-button" id="open-cart" type="button" aria-label="Abrir carrito">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.2 11.1a2 2 0 0 0 2 1.6h8.5a2 2 0 0 0 2-1.6L21 8H6"></path><circle cx="10" cy="20" r="1"></circle><circle cx="18" cy="20" r="1"></circle></svg>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <p class="page-status" id="page-status" role="status" hidden></p>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> BUENAS ELECCIONES, TODOS LOS DÍAS</div>
+          <h1 id="hero-title">Natural para ellos.<br /><span>Único para vos.</span></h1>
+          <p>Elegí alimento natural para tus mascotas y objetos para darle vida a tu hogar. Consultá precios y disponibilidad.</p>
+          <a class="primary-button hero-button" href="#productos">Descubrir productos <span aria-hidden="true">↗</span></a>
+          <div class="hero-social-proof"><span>Catálogo actualizado según la disponibilidad de cada producto</span></div>
+        </div>
+        <div class="hero-art" aria-label="Productos para mascotas y para el hogar">
+          <div class="hero-orbit orbit-one"></div>
+          <div class="hero-orbit orbit-two"></div>
+          <div class="hero-sticker">MASCOTAS<br />Y HOGAR <span>✳</span></div>
+          <img src="images/novashop-familia.svg" alt="Ilustración de una familia compartiendo su hogar con sus mascotas" />
+          <div class="floating-note"><span class="note-icon">✦</span><span><strong>Stock visible</strong><small>Se valida antes del pago</small></span></div>
+          <span class="art-sparkle sparkle-one">✳</span>
+          <span class="art-sparkle sparkle-two">✦</span>
+        </div>
+        <div class="hero-bottom-note"><span>01</span> NOVASHOP / MASCOTAS Y HOGAR</div>
+      </section>
+
+      <section class="benefits" aria-label="Beneficios de comprar en NovaShop">
+        <div class="benefit"><span class="benefit-icon">♡</span><span><strong>Para los que más querés</strong><small>Alimentación natural para mascotas</small></span></div>
+        <div class="benefit"><span class="benefit-icon">⌂</span><span><strong>Un hogar más tuyo</strong><small>Decoración, textiles y objetos</small></span></div>
+        <div class="benefit"><span class="benefit-icon">✳</span><span><strong>Stock actualizado</strong><small>Solo comprás lo que está disponible</small></span></div>
+      </section>
+
+      <section class="catalog section-wrap" id="productos">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">SELECCIÓN NOVASHOP · PRECIOS DE DEMOSTRACIÓN</div>
+            <h2>Cosas lindas.<br /><span>Stock confirmado.</span></h2>
+          </div>
+          <p>Encontrá opciones para tus mascotas y<br class="desktop-break" /> tu hogar, disponibles de verdad.</p>
+        </div>
+
+        <p class="catalog-notice" id="catalog-notice" role="status" hidden></p>
+        <div class="catalog-toolbar">
+          <div class="category-filters" role="group" aria-label="Filtrar por categoría">
+            <button type="button" class="filter-chip selected" data-category="Todos">Todo</button>
+            <button type="button" class="filter-chip" data-category="Mascotas">Mascotas</button>
+            <button type="button" class="filter-chip" data-category="Hogar">Hogar</button>
+          </div>
+          <span class="results-count" id="results-count">Cargando productos...</span>
+        </div>
+
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+        <div class="empty-results" id="empty-results" hidden>No encontramos productos. Probá con otra búsqueda.</div>
+      </section>
+
+      <section class="newsletter">
+        <div class="newsletter-star">✳</div>
+        <div><span class="eyebrow">NOVEDADES NOVASHOP</span><h2>Buenas cosas<br />para compartir.</h2><p>Probá el recorrido de compra con precios y existencias de demostración.</p></div>
+        <p class="catalog-note">La confirmación de stock y los emails se simulan en esta página; no se envían mensajes ni se realizan cobros.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#" aria-label="NovaShop, inicio"><span class="brand-mark" aria-hidden="true">n<span>.</span></span><span>nova<span>shop</span></span></a>
+      <span>Un mundo de cosas buenas. <span id="current-year"></span></span>
+      <a href="#productos">Ver productos</a>
+    </footer>
+
+    <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+    <aside class="cart-drawer" id="cart-drawer" aria-label="Tu carrito" aria-hidden="true" inert>
+      <div class="drawer-header">
+        <div><span class="eyebrow">TU SELECCIÓN</span><h2>Tu carrito <span id="drawer-item-count">(0)</span></h2></div>
+        <button class="icon-button" id="close-cart" type="button" aria-label="Cerrar carrito">×</button>
+      </div>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="cart-empty" id="cart-empty">
+        <span class="empty-bag">♡</span><h3>Tu carrito está esperando</h3><p>Agregá algo que te guste y va a aparecer acá.</p>
+        <button class="text-button" id="resume-pending-empty" type="button" hidden>Ver pedido pendiente</button>
+        <button class="text-button" id="continue-shopping" type="button">Explorar productos <span aria-hidden="true">↗</span></button>
+      </div>
+      <div class="cart-footer" id="cart-footer" hidden>
+        <div class="shipping-progress" id="shipping-progress"></div>
+        <div class="totals-row"><span>Subtotal</span><strong id="cart-subtotal"></strong></div>
+        <div class="totals-row"><span>Entrega</span><strong id="cart-shipping"></strong></div>
+        <div class="totals-row total-row"><span>Total</span><strong id="cart-total"></strong></div>
+        <button class="text-button" id="resume-order" type="button" hidden>Ver pedido pendiente <span aria-hidden="true">↗</span></button>
+        <button class="primary-button checkout-button" id="checkout-button" type="button">Continuar con la compra <span aria-hidden="true">↗</span></button>
+        <p class="secure-note"><span aria-hidden="true">◇</span> Entrega a coordinar después de confirmar el pedido</p>
+      </div>
+    </aside>
+
+    <dialog class="checkout-dialog" id="checkout-dialog" aria-labelledby="checkout-title">
+      <form class="checkout-form" id="checkout-form">
+        <div class="dialog-header"><div><span class="eyebrow">DEMO DE COMPRA</span><h2 id="checkout-title">¿Cómo querés pagar?</h2></div><button class="icon-button" id="close-checkout" type="button" aria-label="Cerrar">×</button></div>
+        <p class="dialog-intro">Primero se solicita la confirmación de stock. Después podrás simular el pago. No se envían emails ni se cobra dinero real.</p>
+        <fieldset class="payment-options">
+          <legend class="sr-only">Medio de pago</legend>
+          <label class="payment-option"><input type="radio" name="payment" value="Transferencia" checked /><span class="payment-icon">⇄</span><span><strong>Transferencia</strong><small>Simulación; no se realiza una transferencia</small></span><span class="radio-mark"></span></label>
+          <label class="payment-option"><input type="radio" name="payment" value="Efectivo" /><span class="payment-icon">＄</span><span><strong>Efectivo</strong><small>Simulación; no se recibe efectivo</small></span><span class="radio-mark"></span></label>
+        </fieldset>
+        <div class="customer-fields">
+          <label>Tu nombre<input name="customerName" type="text" placeholder="Ej. Alex García" autocomplete="name" required /></label>
+          <label>Tu correo electrónico<input name="customerEmail" type="email" placeholder="hola@ejemplo.com" autocomplete="email" required /></label>
+        </div>
+        <div class="checkout-total"><span>Total del pedido</span><strong id="checkout-total"></strong></div>
+        <p class="form-feedback" id="checkout-status" role="status" hidden></p>
+        <button class="primary-button checkout-button" type="submit">Solicitar confirmación de stock <span aria-hidden="true">↗</span></button>
+        <p class="secure-note"><span aria-hidden="true">◇</span> Demo: no ingreses datos de pago reales</p>
+      </form>
+    </dialog>
+
+    <dialog class="success-dialog" id="success-dialog" aria-labelledby="success-title">
+      <div class="success-content">
+        <button class="icon-button success-close" id="close-success" type="button" aria-label="Cerrar" hidden>×</button>
+        <div class="success-mark" id="success-mark">✉</div>
+        <span class="eyebrow" id="success-eyebrow">DEMO · EMAIL SIMULADO</span>
+        <h2 id="success-title">Solicitud recibida</h2>
+        <p id="success-message"></p>
+        <section class="demo-email" aria-label="Email de demostración">
+          <div class="demo-email-header"><span>DE</span><strong>NovaShop</strong></div>
+          <p>Para: <strong id="email-recipient"></strong></p>
+          <p>Asunto: <strong id="email-subject"></strong></p>
+          <p id="email-body"></p>
+        </section>
+        <div class="success-summary" id="success-summary"></div>
+        <p class="form-feedback" id="order-status-message" role="status" hidden></p>
+          <button class="text-button continue-pending-shopping" id="continue-pending-shopping" type="button">Seguir comprando <span aria-hidden="true">↗</span></button>
+          <button class="primary-button checkout-button" id="finish-shopping" type="button">Seguir explorando <span aria-hidden="true">↗</span></button>
+      </div>
+    </dialog>
+  </body>
+</html>

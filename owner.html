@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Gestión privada de pedidos — NovaShop</title>
+    <link rel="stylesheet" href="owner.css" />
+    <script src="owner.js" defer></script>
+  </head>
+  <body>
+    <header class="owner-header">
+      <a class="brand" href="/" aria-label="NovaShop, volver a la tienda"><span class="brand-mark">n<span>.</span></span><span>nova<span>shop</span></span></a>
+      <a href="/">Volver a la tienda</a>
+    </header>
+
+    <main class="owner-main">
+      <section class="login-panel" id="login-panel" hidden>
+        <p class="eyebrow">ACCESO PRIVADO</p>
+        <h1>Gestión de pedidos</h1>
+        <p>Esta página es solo para la persona propietaria de NovaShop.</p>
+        <form id="owner-login-form">
+          <label for="owner-password">Contraseña privada</label>
+          <input id="owner-password" name="password" type="password" autocomplete="current-password" required />
+          <button type="submit">Ingresar</button>
+        </form>
+        <p class="status-message" id="login-status" role="status" hidden></p>
+      </section>
+
+      <section class="orders-panel" id="orders-panel" hidden>
+        <div class="orders-heading">
+          <div>
+            <p class="eyebrow">SOLO PROPIETARIA</p>
+            <h1>Pedidos</h1>
+            <p>Confirmá el stock antes de cobrar y registrá el pago solo cuando lo hayas recibido.</p>
+          </div>
+          <button class="secondary-button" id="owner-logout" type="button">Cerrar sesión</button>
+        </div>
+        <p class="demo-notice">Las confirmaciones actualizan el estado que ve el cliente en su tienda. Los emails son simulados: no se envían mensajes reales.</p>
+        <p class="status-message" id="orders-status" role="status" hidden></p>
+        <div class="orders-list" id="orders-list"></div>
+      </section>
+    </main>
+  </body>
+</html>

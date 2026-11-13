@@ -1,0 +1,62 @@
+[
+  {
+    "id": "barf-perros",
+    "name": "Alimento BARF natural para perros",
+    "description": "Comida cruda, fresca y porcionada. Precio y stock ficticios para la demo.",
+    "category": "Mascotas",
+    "price": 12500,
+    "stock": 12,
+    "image": "/images/barf-perros.svg",
+    "active": true
+  },
+  {
+    "id": "barf-gatos",
+    "name": "Alimento BARF natural para gatos",
+    "description": "Comida cruda, fresca y porcionada. Precio y stock ficticios para la demo.",
+    "category": "Mascotas",
+    "price": 10500,
+    "stock": 8,
+    "image": "/images/barf-gatos.svg",
+    "active": true
+  },
+  {
+    "id": "mega-trenza-esofago",
+    "name": "Mega trenza de esófago",
+    "description": "Snack natural. Precio y stock ficticios para la demo.",
+    "category": "Mascotas",
+    "price": 6500,
+    "stock": 16,
+    "image": "/images/mega-trenza.svg",
+    "active": true
+  },
+  {
+    "id": "fundas-lavables-sillas",
+    "name": "Fundas lavables para sillas",
+    "description": "Consultá medidas y colores. Precio y stock ficticios para la demo.",
+    "category": "Hogar",
+    "price": 8500,
+    "stock": 10,
+    "image": "/images/fundas-sillas.svg",
+    "active": true
+  },
+  {
+    "id": "cortinados-hogar",
+    "name": "Cortinados para el hogar",
+    "description": "Consultá medidas y telas. Precio y stock ficticios para la demo.",
+    "category": "Hogar",
+    "price": 18500,
+    "stock": 5,
+    "image": "/images/cortinados.svg",
+    "active": true
+  },
+  {
+    "id": "objetos-decoracion",
+    "name": "Objetos de decoración para el hogar",
+    "description": "Estilo y materiales referenciales. Precio y stock ficticios para la demo.",
+    "category": "Hogar",
+    "price": 4200,
+    "stock": 20,
+    "image": "/images/decoracion-hogar.svg",
+    "active": true
+  }
+]

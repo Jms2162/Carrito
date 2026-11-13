@@ -1,0 +1,63 @@
+:root {
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+  color: #24231f;
+  background: #f8f8f6;
+  --green: #2f5747;
+  --line: #e9e9e5;
+  --muted: #77766f;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+a { color: inherit; text-decoration: none; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+[hidden] { display: none !important; }
+
+.owner-header { height: 74px; padding: 0 max(calc((100vw - 1060px) / 2), 5%); display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); background: white; }
+.owner-header > a:last-child { color: var(--green); font-size: 13px; }
+.brand { display: inline-flex; align-items: center; gap: 9px; font-size: 21px; letter-spacing: -.06em; font-weight: 800; }
+.brand > span:last-child > span { color: var(--green); }
+.brand-mark { width: 28px; height: 28px; display: grid; place-items: center; border-radius: 9px 9px 9px 3px; color: white; background: var(--green); font-size: 22px; line-height: 1; }
+.brand-mark > span { color: #f4a47c; }
+.owner-main { max-width: 960px; min-height: calc(100vh - 74px); margin: 0 auto; padding: 48px 24px; }
+.login-panel { max-width: 430px; margin: 50px auto; padding: 30px; border: 1px solid var(--line); border-radius: 8px; background: white; box-shadow: 0 8px 32px #00000008; }
+.eyebrow { margin: 0 0 8px; color: var(--green); font-size: 11px; letter-spacing: .08em; font-weight: 700; }
+h1 { margin: 0 0 10px; font-size: clamp(26px, 4vw, 36px); letter-spacing: -.04em; }
+.login-panel > p:not(.eyebrow):not(.status-message), .orders-heading > div > p:last-child { color: var(--muted); font-size: 14px; line-height: 1.6; }
+.login-panel form { margin-top: 24px; display: grid; gap: 10px; }
+.login-panel label { font-size: 13px; font-weight: 600; }
+.login-panel input { height: 42px; padding: 0 12px; border: 1px solid #d9dbd3; border-radius: 4px; }
+.login-panel input:focus { outline: 2px solid #aebfb2; border-color: var(--green); }
+.login-panel button, .order-action { min-height: 42px; padding: 0 16px; border: 0; border-radius: 4px; color: white; background: var(--green); font-weight: 600; }
+.login-panel button:hover, .order-action:hover { background: #244536; }
+.orders-heading { display: flex; align-items: start; justify-content: space-between; gap: 20px; }
+.secondary-button { min-height: 38px; padding: 0 13px; border: 1px solid #d9dbd3; border-radius: 4px; color: var(--green); background: white; }
+.demo-notice { margin: 22px 0; padding: 13px 15px; border: 1px solid #e8dfd3; border-radius: 4px; color: #71553f; background: #f7f1e8; font-size: 12px; line-height: 1.6; }
+.status-message { margin: 14px 0 0; color: #914e43; font-size: 13px; line-height: 1.5; }
+.orders-list { display: grid; gap: 14px; }
+.empty-orders { padding: 35px 20px; border: 1px dashed #d9dbd3; border-radius: 6px; color: var(--muted); text-align: center; }
+.order-card { padding: 20px; border: 1px solid var(--line); border-radius: 6px; background: white; }
+.order-card-header { display: flex; align-items: start; justify-content: space-between; gap: 16px; }
+.order-card h2 { margin: 0; font-size: 17px; }
+.order-meta { margin: 6px 0 0; color: var(--muted); font-size: 12px; line-height: 1.6; overflow-wrap: anywhere; }
+.order-status { padding: 6px 9px; border-radius: 20px; color: #6b5b32; background: #f7f1df; font-size: 11px; white-space: nowrap; }
+.order-status.status-paid { color: #2e6049; background: #e8efe7; }
+.order-status.status-unavailable { color: #914e43; background: #f6e9e5; }
+.order-items { margin: 17px 0; padding: 0; display: grid; gap: 8px; list-style: none; }
+.order-items li { display: flex; justify-content: space-between; gap: 12px; font-size: 13px; }
+.order-items li span:last-child { white-space: nowrap; }
+.order-total { padding-top: 12px; display: flex; justify-content: space-between; border-top: 1px solid var(--line); font-size: 14px; font-weight: 700; }
+.order-action { margin-top: 16px; width: 100%; }
+.order-action:disabled, .login-panel button:disabled { opacity: .6; cursor: wait; }
+.order-note { margin: 12px 0 0; color: var(--muted); font-size: 11px; line-height: 1.5; }
+
+@media (max-width: 540px) {
+  .owner-main { padding: 28px 16px; }
+  .owner-header { padding: 0 16px; }
+  .login-panel { margin: 20px auto; padding: 23px; }
+  .orders-heading { flex-direction: column; }
+  .orders-heading .secondary-button { align-self: end; }
+  .order-card { padding: 16px; }
+  .order-card-header { flex-direction: column; }
+}
